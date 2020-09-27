@@ -27,6 +27,6 @@ class CounterBean {
     @Scheduled(cron = "{cron.expr}")
     fun cronJobWithExpressionInConfig() {
         counter.incrementAndGet()
-        println("Cron expression configured in application.properties")
+//        println("Cron expression configured in application.properties")
     }
 }
