@@ -11,6 +11,10 @@ You can run your application in dev mode that enables live coding using:
 mvn quarkus:dev
 ```
 
+```
+http :8080/ 可以从后台看文件有哪些改变
+```
+
 ## Packaging and running the application
 
 The application can be packaged using `./mvn package`.

@@ -1,7 +1,7 @@
 wc:
   repos:
       - "git@github.com:jeetech/rust_git2_code_stats.git"
-      - "git@github.com:qiuzhanghua/rust-by-leetcode.git"
+#      - "git@github.com:qiuzhanghua/rust-by-leetcode.git"
   root:
   key:
   passwd:
