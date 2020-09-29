@@ -1,18 +1,14 @@
 package com.example
 
 import org.eclipse.jgit.api.Git
-import org.eclipse.jgit.diff.*
+import org.eclipse.jgit.diff.DiffFormatter
 import org.eclipse.jgit.revwalk.RevCommit
 import org.eclipse.jgit.treewalk.AbstractTreeIterator
 import org.eclipse.jgit.treewalk.CanonicalTreeParser
 import org.eclipse.jgit.treewalk.EmptyTreeIterator
 import org.eclipse.jgit.util.io.NullOutputStream
-import java.io.ByteArrayOutputStream
 import java.io.File
-import java.io.IOException
-import java.io.OutputStream
 import java.nio.file.Paths
-import javax.annotation.PostConstruct
 import javax.enterprise.context.ApplicationScoped
 import javax.inject.Inject
 
