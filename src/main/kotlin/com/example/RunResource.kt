@@ -1,19 +1,22 @@
 package com.example
 
+import javax.annotation.PostConstruct
 import javax.inject.Inject
 import javax.ws.rs.GET
 import javax.ws.rs.Path
 import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 
-
-@Path("/count")
-class CountResource {
+@Path("/run")
+class RunResource {
     @Inject
-    var counter: CounterBean? = null
+    lateinit var gitBean: GitBean
+
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    fun hello(): String {
-        return "count: " + counter!!.get()
+    fun index(): String {
+        gitBean.run()
+        return "finished!"
     }
+
 }

@@ -12,7 +12,7 @@ mvn quarkus:dev
 ```
 
 ```
-http :8080/ 可以从后台看文件有哪些改变
+http :8080/run 来强制运行一次
 ```
 
 ## Packaging and running the application

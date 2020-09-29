@@ -1,6 +1,7 @@
 wc:
   repos:
-      - "git@github.com:jeetech/rust_git2_code_stats.git"
+    - "git@github.com:qiuzhanghua/abc.git"
+#      - "git@github.com:jeetech/rust_git2_code_stats.git"
 #      - "git@github.com:qiuzhanghua/rust-by-leetcode.git"
   root:
   key:
@@ -10,4 +11,6 @@ wc:
     from: "b"
 
 cron:
-  expr: "*/5 * * * * ?"
+  expr: "0 0 2 ? * SUN,MON *"
+# 每周日和周一早晨2点运行
+# https://www.freeformatter.com/cron-expression-generator-quartz.html
