@@ -1,14 +1,16 @@
 wc:
   repos:
-    - "git@github.com:qiuzhanghua/abc.git"
+    - abc:
+      - git@github.com:qiuzhanghua/abc.git
+    - leetcode:
+      - "git@github.com:qiuzhanghua/rust-by-leetcode.git"
+#   - "git@github.com:qiuzhanghua/abc.git"
 #      - "git@github.com:jeetech/rust_git2_code_stats.git"
 #      - "git@github.com:qiuzhanghua/rust-by-leetcode.git"
   root:
   key:
   passwd:
-  merge:
-    to: "a"
-    from: "b"
+
 
 cron:
   expr: "0 0 2 ? * SUN,MON *"
