@@ -31,7 +31,7 @@ class GitBean {
         }
 
         config.getAllRepos().entries.forEach { it ->
-            val id = it.key
+//            val id = it.key
             val v = it.value
 
             for (s in v) {
@@ -57,7 +57,7 @@ class GitBean {
                     val git = Git.open(File(path))
                     val pull = git.pull()
                     val result = pull.call()
-//                    println(result)
+                    println(result)
                     git.close()
                 }
 
@@ -97,8 +97,10 @@ class GitBean {
                             for (entry in diffs) {
                                 println("Entry: " + entry + ", from: " + entry.oldId + ", to: " + entry.newId)
                                 println(entry.newPath)  // 文件或者路径名
-                                val loader = git.repository.open(entry.newId.toObjectId())
-                                println("${loader.size} bytes, ${entry.newMode}, ${loader.type} , ${loader.isLarge}")
+                                if (entry.newId.name() != "0000000000000000000000000000000000000000") {
+                                    val loader = git.repository.open(entry.newId.toObjectId())
+                                    println("${loader.size} bytes, ${entry.newMode}, ${loader.type} , ${loader.isLarge}")
+                                }
                                 val fileHeader = diffFormatter.toFileHeader(entry)
                                 for (hunk in fileHeader.hunks) {
                                     println("$hunk")

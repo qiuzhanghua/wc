@@ -1,12 +1,12 @@
 wc:
   repos:
-#    - abc:
-#      - git@github.com:qiuzhanghua/abc.git
+    - abc:
+        - git@github.com:qiuzhanghua/abc.git
     - yaml:
-      - git@github.com:qiuzhanghua/rust-by-leetcode.git
-#   - "git@github.com:qiuzhanghua/abc.git"
-#      - "git@github.com:jeetech/rust_git2_code_stats.git"
-#      - "git@github.com:qiuzhanghua/rust-by-leetcode.git"
+        - git@github.com:jeetech/rust_git2_code_stats.git
+  #   - "git@github.com:qiuzhanghua/abc.git"
+  #      - "git@github.com:jeetech/rust_git2_code_stats.git"
+        - git@github.com:qiuzhanghua/rust-by-leetcode.git
   root:
   key:
   passwd:
