@@ -21,7 +21,7 @@ class GitBean {
     lateinit var config: CheckerConfiguration
 
     fun run() {
-        if (config.root == "") {
+        if (config.root.isEmpty()) {
             config.root = Paths.get(System.getProperty("user.home")).toAbsolutePath()
                     .toString() + File.separator + "wc"
         }
@@ -30,9 +30,6 @@ class GitBean {
             root.mkdir()
         }
 
-        println("+++++++++++++++")
-        println(config.getAllRepos());
-        println("+++++++++++++++")
         config.getAllRepos().entries.forEach { it ->
             val id = it.key
             val v = it.value
@@ -60,7 +57,7 @@ class GitBean {
                     val git = Git.open(File(path))
                     val pull = git.pull()
                     val result = pull.call()
-                    println(result)
+//                    println(result)
                     git.close()
                 }
 
