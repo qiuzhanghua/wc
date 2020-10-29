@@ -7,11 +7,8 @@ import org.eclipse.jgit.transport.JschConfigSessionFactory
 import org.eclipse.jgit.transport.OpenSshConfig
 import org.eclipse.jgit.transport.SshSessionFactory
 import org.eclipse.jgit.util.FS
-import org.eclipse.microprofile.config.inject.ConfigProperty
 import java.io.File
 import java.nio.file.Paths
-import java.util.ArrayList
-import javax.inject.Inject
 import javax.json.JsonArray
 import javax.json.JsonObject
 
@@ -24,7 +21,7 @@ class CheckerConfiguration {
     var repos: JsonObject? = null
 
     fun getAllRepos(): HashMap<String, List<String>> {
-        var ans = HashMap<String, List<String>>()
+        val ans = HashMap<String, List<String>>()
         repos?.values?.forEach { arr ->
             val a = arr as JsonArray
             a.forEach {
@@ -50,7 +47,7 @@ class CheckerConfiguration {
             }
 
             override fun createDefaultJSch(fs: FS?): JSch {
-                var jsch = super.createDefaultJSch(fs)
+                val jsch = super.createDefaultJSch(fs)
                 if (key.isEmpty()) {
                     key = Paths.get(System.getProperty("user.home")).toAbsolutePath()
                             .toString() + File.separator + ".ssh" + File.separator + "id_rsa"

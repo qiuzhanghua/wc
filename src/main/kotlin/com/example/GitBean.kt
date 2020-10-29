@@ -30,7 +30,7 @@ class GitBean {
             root.mkdir()
         }
 
-        config.getAllRepos().entries.forEach { it ->
+        config.getAllRepos().entries.forEach {
 //            val id = it.key
             val v = it.value
 
